@@ -6,14 +6,15 @@ var args   = process.argv.slice(2);
 var async  = require('async');
 var mkdirp = require('mkdirp');
 var chalk  = require('chalk');
-var cp     = require('child_process');
-var path   = require('path');
-var JLBOX  = 'JLBOX_MODULE';
+var cp          = require('child_process');
+var path        = require('path');
+var JLBOX       = 'JLBOX_MODULE';
+var TESTINGPKG  = 'TESTING_PKG';
 
 function printHelp() {
   console.log('The following commands are supported:');
-  console.log('  init     Bootstrap project with gulp-related files');
-  console.log('  module   Add module and test files');
+  console.log('  init  testing   Bootstrap project with gulp-related files and given testing framework support');
+  console.log('  module  module_name Add module module_name and test files');
 }
 
 function initJulia(callback) {
